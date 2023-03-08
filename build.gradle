@@ -1,6 +1,6 @@
 plugins {
-    // Apply the java-library plugin for API and implementation separation.
-    id 'java-library'
+    id 'war'
+    id 'java'
 }
 
 repositories {
@@ -26,8 +26,20 @@ dependencies {
     // https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api
 	implementation 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final'
 	
+	// https://mvnrepository.com/artifact/org.springframework/spring-context
+	implementation 'org.springframework:spring-context:6.0.6'
+	
 	// https://mvnrepository.com/artifact/org.springframework/spring-webmvc
 	implementation 'org.springframework:spring-webmvc:6.0.4'
+	
+	// https://mvnrepository.com/artifact/com.google.code.gson/gson
+	implementation 'com.google.code.gson:gson:2.10.1'
+	
+	// https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+	compileOnly 'javax.servlet:javax.servlet-api:3.0.1'
+	
+
+	
 }
 
 tasks.named('test') {
